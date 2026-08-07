@@ -490,6 +490,77 @@
           </div>
         </div>
       </div>
+      <div class="project reveal">
+        <div class="project-body">
+          <div class="project-media" aria-hidden="true">
+            <svg viewBox="0 0 240 190" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="1" width="238" height="188" rx="6" fill="#0B1119" stroke="#26303D"/>
+              <!-- claim node -->
+              <rect x="94" y="14" width="52" height="22" rx="3" fill="#141D28" stroke="#C792EA" stroke-width="1.3"/>
+              <text x="120" y="29" font-family="IBM Plex Mono, monospace" font-size="9" fill="#ECEEF2" text-anchor="middle">CLAIM</text>
+              <!-- retrieval lines -->
+              <g stroke="#C792EA" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.85">
+                <path d="M108,36 L54,78"/>
+                <path d="M108,36 L86,86"/>
+                <path d="M132,36 L154,86"/>
+                <path d="M132,36 L186,78"/>
+              </g>
+              <!-- supporting evidence docs (left/teal) -->
+              <g>
+                <rect x="34" y="80" width="40" height="30" rx="2" fill="#0F1620" stroke="#3FD6C4" stroke-width="1.3"/>
+                <line x1="40" y1="88" x2="68" y2="88" stroke="#3FD6C4" stroke-width="1"/>
+                <line x1="40" y1="94" x2="68" y2="94" stroke="#3FD6C4" stroke-width="1"/>
+                <line x1="40" y1="100" x2="60" y2="100" stroke="#3FD6C4" stroke-width="1"/>
+                <rect x="66" y="88" width="40" height="30" rx="2" fill="#0F1620" stroke="#3FD6C4" stroke-width="1.3"/>
+                <line x1="72" y1="96" x2="100" y2="96" stroke="#3FD6C4" stroke-width="1"/>
+                <line x1="72" y1="102" x2="100" y2="102" stroke="#3FD6C4" stroke-width="1"/>
+                <line x1="72" y1="108" x2="92" y2="108" stroke="#3FD6C4" stroke-width="1"/>
+              </g>
+              <!-- opposing evidence docs (right/warn) -->
+              <g>
+                <rect x="166" y="80" width="40" height="30" rx="2" fill="#0F1620" stroke="#E2A03F" stroke-width="1.3"/>
+                <line x1="172" y1="88" x2="200" y2="88" stroke="#E2A03F" stroke-width="1"/>
+                <line x1="172" y1="94" x2="200" y2="94" stroke="#E2A03F" stroke-width="1"/>
+                <line x1="172" y1="100" x2="192" y2="100" stroke="#E2A03F" stroke-width="1"/>
+                <rect x="134" y="88" width="40" height="30" rx="2" fill="#0F1620" stroke="#E2A03F" stroke-width="1.3"/>
+                <line x1="140" y1="96" x2="168" y2="96" stroke="#E2A03F" stroke-width="1"/>
+                <line x1="140" y1="102" x2="168" y2="102" stroke="#E2A03F" stroke-width="1"/>
+                <line x1="140" y1="108" x2="160" y2="108" stroke="#E2A03F" stroke-width="1"/>
+              </g>
+              <!-- contradiction flag -->
+              <path d="M120,118 L120,138" stroke="#C792EA" stroke-width="1.4"/>
+              <circle cx="120" cy="148" r="14" fill="#0F1620" stroke="#C792EA" stroke-width="1.6"/>
+              <text x="120" y="145" font-family="IBM Plex Mono, monospace" font-size="8" fill="#C792EA" text-anchor="middle">⚠</text>
+              <text x="120" y="157" font-family="IBM Plex Mono, monospace" font-size="7" fill="#C792EA" text-anchor="middle">conflict</text>
+              <!-- label chip -->
+              <rect x="10" y="10" width="98" height="18" rx="2" fill="#C792EA"/>
+              <text x="16" y="23" font-family="IBM Plex Mono, monospace" font-size="10" fill="#0F1620">RAG · VERIFICATION</text>
+              <!-- confidence readout -->
+              <text x="230" y="176" font-family="IBM Plex Mono, monospace" font-size="10" fill="#C792EA" text-anchor="end">dual-directional</text>
+              <text x="18" y="176" font-family="IBM Plex Mono, monospace" font-size="10" fill="#5C6675">qdrant · fastapi</text>
+            </svg>
+          </div>
+
+          <div class="project-content">
+            <div class="project-top">
+              <div class="project-title">ClaimTrace — RAG-Based Claim Verification Engine</div>
+              <div class="project-tag privacy">Retrieval &amp; LLMs</div>
+            </div>
+            <p class="project-desc">A RAG pipeline built from scratch — ingestion, embedding, retrieval, and answer synthesis over FastAPI. Instead of simple top-k lookup, it retrieves both supporting and opposing evidence for a claim and flags contradictions across the corpus, blending an LLM confidence score with retrieval signals.</p>
+            <div class="term">
+              <div class="term-line">$ POST /verify {"claim": "..."}</div>
+              <div class="term-line">Embeddings: sentence-transformers (MiniLM) · Store: Qdrant</div>
+              <div class="term-line"><span class="ok">Retrieval: dual-directional</span>  ·  Contradiction flagging: on</div>
+            </div>
+            <div class="tech-row">
+              <span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">Qdrant</span><span class="chip">sentence-transformers</span><span class="chip">RAG</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/npatil09" target="_blank" rel="noopener">GitHub Profile ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div class="project reveal">
         <div class="project-body">
